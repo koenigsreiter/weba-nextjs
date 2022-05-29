@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 255, 0.05);
 }
 
 /* Nav Area */
@@ -12,6 +16,7 @@
   position: relative;
   height: 80px;
   text-align: right;
+  background-color: lightblue;
 }
 #title {
   position: absolute;
@@ -31,6 +36,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .grid {
@@ -90,8 +96,9 @@
 }
 
 .owner {
-  color: grey;
+  color: lightslategrey;
   font-size: 110%;
+  text-decoration: underline;
 }
 
 .pet-name {
@@ -134,11 +141,12 @@ li {
 }
 
 .btn-container {
-  text-align: right;
+  text-align: center;
   padding: 10px;
   position: absolute;
   bottom: 10px;
   right: 10px;
+  left: 10px;
 }
 
 .btn {
