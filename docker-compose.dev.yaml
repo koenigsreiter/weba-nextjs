@@ -1,0 +1,23 @@
+version: "3"
+services:
+  mongo:
+    image: mongo:4.4
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: nextjs
+      MONGO_INITDB_ROOT_PASSWORD: webaws2021
+
+  nextjs:
+    image: weba/nextjs
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - MONGODB_URI=mongodb://nextjs:webaws2021@mongo:27017/?retryWrites=true&w=majority
