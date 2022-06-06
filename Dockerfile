@@ -2,6 +2,8 @@ FROM node:18-slim
 
 EXPOSE 3000
 
+ARG MONGODB_URI 
+
 COPY . /app
 WORKDIR /app
 
