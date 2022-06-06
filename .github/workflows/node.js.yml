@@ -31,8 +31,16 @@ jobs:
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
 
-  deploy:
+  sync-branch:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - run: curl -X POST -L https://api.vercel.com/v1/integrations/deploy/prj_kL1d7KVIK9FpFhi8Q44cViScZibB/ODFuyg83h0
+      - uses: actions/checkout@master
+
+      - name: Merge Main into deploy
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: deploy
+          github_token: ${{ github.token }}
