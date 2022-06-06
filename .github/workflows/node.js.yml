@@ -35,4 +35,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - run: curl -X POST -L https://api.vercel.com/v1/integrations/deploy/prj_kL1d7KVIK9FpFhi8Q44cViScZibB/SdLKVTm2oM
+    - run: curl -X POST -L https://api.vercel.com/v1/integrations/deploy/prj_kL1d7KVIK9FpFhi8Q44cViScZibB/ODFuyg83h0
