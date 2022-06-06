@@ -44,6 +44,7 @@ jobs:
           type: now
           from_branch: main
           target_branch: deploy
+          message: 'Merges main into deploy'
           github_token: ${{ github.token }}
 
   deploy:
